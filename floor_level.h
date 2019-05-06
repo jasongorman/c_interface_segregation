@@ -8,10 +8,10 @@
 #include "room.h"
 
 typedef struct {
-    Room *room;
-    int (*flightsOfStairs)(Room *room);
-} FloorLevel;
+    RoomData *this;
+    int (*flightsOfStairs)(RoomData*);
+} IFloorLevel;
 
-FloorLevel* asFloorLevel(Room *room);
+IFloorLevel* asFloorLevel(IRoom *room);
 
 #endif //ENCAPSULATION_FLOOR_LEVEL_H

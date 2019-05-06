@@ -7,6 +7,6 @@
 
 #include "room.h"
 
-Room* new_rectangular_room(char level, float width, float length);
+IRoom* new_rectangular_room(char level, float width, float length);
 
 #endif //ENCAPSULATION_RECTANGULAR_ROOM_H

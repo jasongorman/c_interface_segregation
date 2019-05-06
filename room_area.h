@@ -8,10 +8,10 @@
 #include "room.h"
 
 typedef struct {
-    Room *room;
-    float (*area)(Room*);
-} Area;
+    RoomData *this;
+    float (*area)(RoomData*);
+} IRoomArea;
 
-Area* asArea(Room *room);
+IRoomArea* asArea(IRoom *room);
 
 #endif //ENCAPSULATION_ROOM_AREA_H

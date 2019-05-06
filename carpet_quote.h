@@ -5,10 +5,10 @@
 #ifndef ENCAPSULATION_CARPET_QUOTE_H
 #define ENCAPSULATION_CARPET_QUOTE_H
 
-#include "area.h"
+#include "room_area.h"
 #include "carpet.h"
 #include "bool.h"
 
-float quote(Area *area, struct Carpet *carpet);
+float quote(IRoomArea *area, struct Carpet *carpet);
 
 #endif //ENCAPSULATION_CARPET_QUOTE_H

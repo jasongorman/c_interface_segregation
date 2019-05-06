@@ -5,7 +5,7 @@
 #include "carpet_quote.h"
 #include "carpet.h"
 
-float quote(Area *area, Carpet *carpet){
-    return price(carpet, area->area(area->room));
+float quote(IRoomArea *area, Carpet *carpet){
+    return price(carpet, area->area(area->this));
 }
 

@@ -5,14 +5,12 @@
 #ifndef ENCAPSULATION_ROOM_H
 #define ENCAPSULATION_ROOM_H
 
-typedef struct Dimensions Dimensions;
-typedef struct Room Room;
+typedef struct RoomData RoomData;
 
-struct Room {
-    Dimensions *dimensions;
-    char level;
-    float (*area)(struct Room*);
-    int (*flightsOfStairs)(struct Room*);
-};
+typedef struct {
+    RoomData *this;
+    float (*area)(RoomData*);
+    int (*flightsOfStairs)(RoomData*);
+} IRoom;
 
 #endif //ENCAPSULATION_ROOM_H

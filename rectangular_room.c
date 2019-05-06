@@ -7,33 +7,33 @@
 #include "rectangular_room.h"
 #include "floor_level.h"
 
-struct Dimensions {
+struct RoomData {
     float width;
     float length;
+    char level;
 };
 
-float rectangular_area(Room *room) {
-    Dimensions *dimensions = room->dimensions;
-    return dimensions->length * dimensions->width;
+float rectangular_area(RoomData *this) {
+    return this->length * this->width;
 }
 
-int rectangularFlightsOfStairs(Room *room){
-    if(room->level == 'G'){
+int rectangularFlightsOfStairs(RoomData *this){
+    if(this->level == 'G'){
         return 0;
     }
-    if(room->level == 'B'){
+    if(this->level == 'B'){
         return -1;
     }
-    return room->level - '0';
+    return this->level - '0';
 }
 
-Room* new_rectangular_room(char level, float width, float length){
-    Dimensions* dimensions = malloc(sizeof(Dimensions));
-    Room* room = malloc(sizeof(Room));
-    dimensions->width = width;
-    dimensions->length = length;
-    room->dimensions = dimensions;
-    room->level = level;
+IRoom* new_rectangular_room(char level, float width, float length){
+    RoomData* this = malloc(sizeof(RoomData));
+    IRoom* room = malloc(sizeof(IRoom));
+    this->width = width;
+    this->length = length;
+    this->level = level;
+    room->this = this;
     room->area = &rectangular_area;
     room->flightsOfStairs = &rectangularFlightsOfStairs;
     return room;

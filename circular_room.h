@@ -7,6 +7,6 @@
 
 #include "room.h"
 
-Room* new_circular_room(char level, float radius);
+IRoom* new_circular_room(char level, float radius);
 
 #endif //ENCAPSULATION_CIRCULAR_ROOM_H

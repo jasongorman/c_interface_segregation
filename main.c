@@ -7,21 +7,21 @@
 #include "bool.h"
 #include <assert.h>
 
-void testRoomArea(Area *area, float expected){
-    assert(area->area(area->room) ==  expected);
+void testRoomArea(IRoomArea *area, float expected){
+    assert(area->area(area->this) ==  expected);
 }
 
-void testFloorLevel(FloorLevel *level, int flights){
-    assert(level->flightsOfStairs(level->room) == flights);
+void testFloorLevel(IFloorLevel *level, int flights){
+    assert(level->flightsOfStairs(level->this) == flights);
 }
 
-void testCarpetQuote(Room *room, Carpet *carpet, float price){
+void testCarpetQuote(IRoom *room, Carpet *carpet, float price){
     assert(quote(asArea(room), carpet) == price);
 }
 
 int main() {
-    Room *rectangularRoom = new_rectangular_room('G', 2.5, 2.5);
-    Room *circularRoom = new_circular_room('B', 2.5);
+    IRoom *rectangularRoom = new_rectangular_room('G', 2.5, 2.5);
+    IRoom *circularRoom = new_circular_room('B', 2.5);
     Carpet *carpetNoRounding = new_carpet(10.0, false);
     Carpet *carpetRounding = new_carpet(10.0, true);
     testRoomArea(asArea(rectangularRoom), 6.25);

@@ -5,9 +5,9 @@
 #include <stdlib.h>
 #include "floor_level.h"
 
-FloorLevel* asFloorLevel(Room *room){
-    FloorLevel *level = malloc(sizeof(FloorLevel));
-    level->room = room;
+IFloorLevel* asFloorLevel(IRoom *room){
+    IFloorLevel *level = malloc(sizeof(IFloorLevel));
+    level->this = room->this;
     level->flightsOfStairs = room->flightsOfStairs;
     return level;
 }
