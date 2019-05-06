@@ -3,10 +3,9 @@
 //
 
 #include "carpet_quote.h"
-#include "room.h"
 #include "carpet.h"
 
-float quote(Room *room, struct Carpet *carpet){
-    return price(carpet, room->area(room));
+float quote(Area *area, Carpet *carpet){
+    return price(carpet, area->area(area->room));
 }
 

@@ -3,4 +3,4 @@ project(encapsulation C)
 
 set(CMAKE_C_STANDARD 90)
 
-add_executable(encapsulation main.c carpet_quote.c carpet_quote.h room.h carpet.c carpet.h bool.h rectangular_room.c rectangular_room.h circular_room.c circular_room.h)
+add_executable(encapsulation main.c carpet_quote.c carpet_quote.h room.h carpet.c carpet.h bool.h rectangular_room.c rectangular_room.h circular_room.c circular_room.h floor_level.h floor_level.c area.c area.h)

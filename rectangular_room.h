@@ -7,8 +7,6 @@
 
 #include "room.h"
 
-Room* new_rectangular_room(float width, float length);
-
-float rectangular_area(struct Room *room);
+Room* new_rectangular_room(char level, float width, float length);
 
 #endif //ENCAPSULATION_RECTANGULAR_ROOM_H

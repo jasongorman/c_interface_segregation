@@ -10,7 +10,9 @@ typedef struct Room Room;
 
 struct Room {
     Dimensions *dimensions;
+    char level;
     float (*area)(struct Room*);
+    int (*flightsOfStairs)(struct Room*);
 };
 
 #endif //ENCAPSULATION_ROOM_H

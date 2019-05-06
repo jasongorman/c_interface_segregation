@@ -7,8 +7,6 @@
 
 #include "room.h"
 
-Room* new_circular_room(float radius);
-
-float circular_area(struct Room *room);
+Room* new_circular_room(char level, float radius);
 
 #endif //ENCAPSULATION_CIRCULAR_ROOM_H

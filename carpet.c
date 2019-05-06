@@ -13,7 +13,7 @@ struct Carpet {
 
 float price(struct Carpet *carpet, float area) {
     if(carpet->roundUp){
-        area = ceil(area);
+        area = (float)ceil(area);
     }
 
     return area * carpet->pricePerSqrMetre;
